@@ -28,6 +28,8 @@ class Game{
     
     func changeConfiguration(conf : Configuration){
         knight.configuration = conf
+        targetCell = Cell(x: conf.targetInitialPosition.x, y: conf.targetInitialPosition.y)
+        knight.currentLocation = Cell(x: conf.knightInitialPosition.x, y: conf.knightInitialPosition.y)
     }
     
     func findAllPaths() -> [Path]{
