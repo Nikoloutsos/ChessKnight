@@ -80,7 +80,12 @@ class ChessBoardUIView: UIView {
         let location = firstTouch.location(in: self)
         let coordinateClicked = getSquareLocationByXandY(x: location.x, y: location.y)
         
-        // We only change 2 cells. We do not rerender the whole view (Resources consuming)
+        if(!isInputClickWithinViewBounds(x: location.x, y: location.y)){
+            self.typeOfPieceStartDragging = nil
+            self.coordinateStartDragging = nil
+            return
+        }
+        
         if typeOfPieceStartDragging! == .knight{
             locationOfKnight = coordinateClicked
             delegate?.onKnightPositionChanged(newLocation: coordinateClicked)
@@ -91,7 +96,6 @@ class ChessBoardUIView: UIView {
         
         self.typeOfPieceStartDragging = nil
         self.coordinateStartDragging = nil
-        
         setNeedsDisplay()
     }
     
@@ -139,5 +143,9 @@ class ChessBoardUIView: UIView {
     
     private func getSquareLocationByXandY(x: CGFloat, y: CGFloat) -> Coordinate{
         Coordinate(x: Int(x/cellSide), y: Int(y/cellSide))
+    }
+    
+    private func isInputClickWithinViewBounds(x : CGFloat, y : CGFloat) -> Bool{
+        return x <= bounds.width && y <= bounds.height
     }
 }
