@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    @IBOutlet weak var chessSizeSlider: UISlider!
+    @IBOutlet weak var chessSizeLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var chessBoardUIView: ChessBoardUIView!
@@ -18,9 +20,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         chessBoardUIView.delegate = presenter
         
-        let config = Configuration(sizeOfChessBoard: 12)
+        let config = Configuration(sizeOfChessBoard: 16)
         chessBoardUIView.applyConfiguration(conf: config)
         presenter.initGame(conf: config)
+        
+        chessSizeSlider.value = 8
     }
     
     
@@ -33,7 +37,31 @@ class ViewController: UIViewController {
         let config = Configuration(sizeOfChessBoard: 8)
         chessBoardUIView.applyConfiguration(conf: config)
         presenter.changeChessBoardConfiguration(conf: config)
+        chessSizeSlider.value = 8
+        onChessSizeSliderValueChanged(chessSizeSlider)
+        
     }
+    
+    @IBAction func onReconfigureButtonPressed(_ sender: Any) {
+        
+        let config = Configuration(sizeOfChessBoard: Int(chessSizeSlider.value))
+        chessBoardUIView.applyConfiguration(conf: config)
+        presenter.changeChessBoardConfiguration(conf: config)
+    }
+    
+    
+    
+    @IBAction func onChessSizeSliderValueChanged(_ sender: UISlider) {
+        
+        let value = Int(sender.value)
+        chessSizeLabel.text = "N = \(value)"
+    }
+    
+    
+    
+    
+    
+    
 }
 
 extension ViewController : ViewControllerPresenterView{
