@@ -8,18 +8,17 @@
 import Foundation
 
 class Game{
-    var configuation : Configuration
     var knight : Knight
-    var targetCell: Cell?
+    var targetCell: Cell
     var engine: SolutionEngine
     
-    init(config conf : Configuration, knight : Knight, solutionEngine: SolutionEngine) {
-        self.configuation = conf
+    init(knight : Knight, solutionEngine: SolutionEngine, targetCell : Cell) {
         self.knight = knight
-        self.engine = SolutionEngine()
+        self.engine = solutionEngine
+        self.targetCell = targetCell
     }
     
-    func changeStartPosition(chessBoardCell cell : Cell){
+    func changeKnightPosition(chessBoardCell cell : Cell){
         knight.currentLocation = cell
     }
     
@@ -27,8 +26,18 @@ class Game{
         targetCell = cell;
     }
     
-    func findAllPaths(){
-        guard let targetCell = targetCell else {return}
-        engine.solve(knight: knight, targetCell: targetCell)
+    func changeConfiguration(conf : Configuration){
+        knight.configuration = conf
+    }
+    
+    func findAllPaths() -> [Path]{
+        var pathFoundList : [Path] = []
+        let metaCellList = engine.solve(knight: knight, targetCell: targetCell)
+        
+        for curMetaCell in metaCellList{
+            pathFoundList.append(curMetaCell.getPath())
+        }
+        
+        return pathFoundList
     }
 }
