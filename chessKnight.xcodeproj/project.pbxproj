@@ -21,7 +21,22 @@
 		1CD01BAF25816C71009B7748 /* SolutionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD01BAE25816C71009B7748 /* SolutionEngine.swift */; };
 		1CD01BB325816D4C009B7748 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD01BB225816D4C009B7748 /* Stack.swift */; };
 		1CD01BBE2581A288009B7748 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD01BBD2581A288009B7748 /* Path.swift */; };
+		1CD01BDE25822857009B7748 /* chessKnightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD01BC8258225F4009B7748 /* chessKnightTests.swift */; };
+		1CD01BED25825BED009B7748 /* PathsDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD01BEC25825BED009B7748 /* PathsDisplayViewController.swift */; };
+		1CD92B022582C6FA00FAC266 /* ChessBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B012582C6FA00FAC266 /* ChessBoardUIView.swift */; };
+		1CD92B062582F84100FAC266 /* ChessBoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */; };
+		1CD92B0A258303EE00FAC266 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B09258303EE00FAC266 /* ViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CD01BCB258225F4009B7748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CD01B7825815D2C009B7748 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CD01B7F25815D2C009B7748;
+			remoteInfo = chessKnight;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1CD01B8025815D2C009B7748 /* chessKnight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chessKnight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +55,24 @@
 		1CD01BAE25816C71009B7748 /* SolutionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionEngine.swift; sourceTree = "<group>"; };
 		1CD01BB225816D4C009B7748 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		1CD01BBD2581A288009B7748 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		1CD01BC6258225F4009B7748 /* chessKnightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chessKnightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CD01BC8258225F4009B7748 /* chessKnightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessKnightTests.swift; sourceTree = "<group>"; };
+		1CD01BCA258225F4009B7748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CD01BEC25825BED009B7748 /* PathsDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathsDisplayViewController.swift; sourceTree = "<group>"; };
+		1CD92B012582C6FA00FAC266 /* ChessBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardUIView.swift; sourceTree = "<group>"; };
+		1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardDelegate.swift; sourceTree = "<group>"; };
+		1CD92B09258303EE00FAC266 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1CD01B7D25815D2C009B7748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CD01BC3258225F4009B7748 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1CD01B8225815D2C009B7748 /* chessKnight */,
+				1CD01BC7258225F4009B7748 /* chessKnightTests */,
 				1CD01B8125815D2C009B7748 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1CD01B8025815D2C009B7748 /* chessKnight.app */,
+				1CD01BC6258225F4009B7748 /* chessKnightTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				1CD01BC02581A521009B7748 /* scene */,
-				1CD01BB125816D37009B7748 /* DataStracture */,
+				1CD01BB125816D37009B7748 /* dataStracture */,
 				1CD01B9825815D50009B7748 /* model */,
 				1CD01B8325815D2C009B7748 /* AppDelegate.swift */,
 				1CD01B8525815D2C009B7748 /* SceneDelegate.swift */,
@@ -99,20 +130,57 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		1CD01BB125816D37009B7748 /* DataStracture */ = {
+		1CD01BB125816D37009B7748 /* dataStracture */ = {
 			isa = PBXGroup;
 			children = (
 				1CD01BB225816D4C009B7748 /* Stack.swift */,
 			);
-			path = DataStracture;
+			path = dataStracture;
 			sourceTree = "<group>";
 		};
 		1CD01BC02581A521009B7748 /* scene */ = {
 			isa = PBXGroup;
 			children = (
-				1CD01B8725815D2C009B7748 /* ViewController.swift */,
+				1CD01BEB25825B62009B7748 /* resultPaths */,
+				1CD01BEA25825B53009B7748 /* playground */,
 			);
 			path = scene;
+			sourceTree = "<group>";
+		};
+		1CD01BC7258225F4009B7748 /* chessKnightTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CD01BC8258225F4009B7748 /* chessKnightTests.swift */,
+				1CD01BCA258225F4009B7748 /* Info.plist */,
+			);
+			path = chessKnightTests;
+			sourceTree = "<group>";
+		};
+		1CD01BEA25825B53009B7748 /* playground */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92B002582C6D500FAC266 /* customView */,
+				1CD01B8725815D2C009B7748 /* ViewController.swift */,
+				1CD92B09258303EE00FAC266 /* ViewControllerPresenter.swift */,
+			);
+			path = playground;
+			sourceTree = "<group>";
+		};
+		1CD01BEB25825B62009B7748 /* resultPaths */ = {
+			isa = PBXGroup;
+			children = (
+				1CD01BEC25825BED009B7748 /* PathsDisplayViewController.swift */,
+			);
+			path = resultPaths;
+			sourceTree = "<group>";
+		};
+		1CD92B002582C6D500FAC266 /* customView */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92B012582C6FA00FAC266 /* ChessBoardUIView.swift */,
+				1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */,
+			);
+			path = customView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +203,24 @@
 			productReference = 1CD01B8025815D2C009B7748 /* chessKnight.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1CD01BC5258225F4009B7748 /* chessKnightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CD01BCD258225F4009B7748 /* Build configuration list for PBXNativeTarget "chessKnightTests" */;
+			buildPhases = (
+				1CD01BC2258225F4009B7748 /* Sources */,
+				1CD01BC3258225F4009B7748 /* Frameworks */,
+				1CD01BC4258225F4009B7748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CD01BCC258225F4009B7748 /* PBXTargetDependency */,
+			);
+			name = chessKnightTests;
+			productName = chessKnightTests;
+			productReference = 1CD01BC6258225F4009B7748 /* chessKnightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,6 +232,10 @@
 				TargetAttributes = {
 					1CD01B7F25815D2C009B7748 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					1CD01BC5258225F4009B7748 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 1CD01B7F25815D2C009B7748;
 					};
 				};
 			};
@@ -163,6 +253,7 @@
 			projectRoot = "";
 			targets = (
 				1CD01B7F25815D2C009B7748 /* chessKnight */,
+				1CD01BC5258225F4009B7748 /* chessKnightTests */,
 			);
 		};
 /* End PBXProject section */
@@ -178,6 +269,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CD01BC4258225F4009B7748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -185,21 +283,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD01BED25825BED009B7748 /* PathsDisplayViewController.swift in Sources */,
 				1CD01BAF25816C71009B7748 /* SolutionEngine.swift in Sources */,
 				1CD01BBE2581A288009B7748 /* Path.swift in Sources */,
+				1CD92B0A258303EE00FAC266 /* ViewControllerPresenter.swift in Sources */,
 				1CD01B8825815D2C009B7748 /* ViewController.swift in Sources */,
 				1CD01B9A25815D6B009B7748 /* Cell.swift in Sources */,
 				1CD01BA925816511009B7748 /* Configuration.swift in Sources */,
 				1CD01BA225815F70009B7748 /* Piece.swift in Sources */,
 				1CD01B8425815D2C009B7748 /* AppDelegate.swift in Sources */,
+				1CD92B062582F84100FAC266 /* ChessBoardDelegate.swift in Sources */,
 				1CD01BB325816D4C009B7748 /* Stack.swift in Sources */,
+				1CD92B022582C6FA00FAC266 /* ChessBoardUIView.swift in Sources */,
 				1CD01B8625815D2C009B7748 /* SceneDelegate.swift in Sources */,
 				1CD01B9F25815ED6009B7748 /* Knight.swift in Sources */,
 				1CD01BAC258167CC009B7748 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CD01BC2258225F4009B7748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD01BDE25822857009B7748 /* chessKnightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CD01BCC258225F4009B7748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CD01B7F25815D2C009B7748 /* chessKnight */;
+			targetProxy = 1CD01BCB258225F4009B7748 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1CD01B8925815D2C009B7748 /* Main.storyboard */ = {
@@ -343,6 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = chessKnight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = chessKnight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,6 +490,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1CD01BCE258225F4009B7748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chessKnightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pg1999.chessKnightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chessKnight.app/chessKnight";
+			};
+			name = Debug;
+		};
+		1CD01BCF258225F4009B7748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = chessKnightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pg1999.chessKnightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chessKnight.app/chessKnight";
 			};
 			name = Release;
 		};
@@ -390,6 +548,15 @@
 			buildConfigurations = (
 				1CD01B9525815D2F009B7748 /* Debug */,
 				1CD01B9625815D2F009B7748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CD01BCD258225F4009B7748 /* Build configuration list for PBXNativeTarget "chessKnightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CD01BCE258225F4009B7748 /* Debug */,
+				1CD01BCF258225F4009B7748 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,13 +26,27 @@ class MetaCell{
     func hasMoreMoves() -> Bool{
         return numberOfMovesMade < 3
     }
+    
+    func getPath() -> Path{
+        var cellVisitedList : [Cell] = []
+        
+        var currentCell : MetaCell? = self
+        
+        for i in 1...numberOfMovesMade + 1{
+            cellVisitedList.append(currentCell!.cell)
+            currentCell = currentCell!.previousCell
+        }
+        
+        return Path(cells: cellVisitedList)
+    }
 }
 
 
+/// This engine is used to solve the problem. In release code this should probably run in a background thread. But because our problem is limited to 3 moves the execution time is small.
 class SolutionEngine{
     
     func solve(knight : Knight, targetCell : Cell) -> [MetaCell]{
-        if isFastCheckPassed(knight: knight, targetCell: targetCell){return []}
+        if !isFastCheckPassed(knight: knight, targetCell: targetCell){return []}
         return solveBruteForceWay(knight: knight, targetCell: targetCell)
     }
     
