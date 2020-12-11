@@ -32,7 +32,7 @@ class MetaCell{
         
         var currentCell : MetaCell? = self
         
-        for i in 1...numberOfMovesMade + 1{
+        for _ in 1...numberOfMovesMade + 1{
             cellVisitedList.append(currentCell!.cell)
             currentCell = currentCell!.previousCell
         }
@@ -76,7 +76,8 @@ class SolutionEngine{
             virtualKnight.currentLocation = topInStackCell.cell
             
             let validKnightMoves = virtualKnight.getValidMoves()
-            let metaCells = convertCellsToMetacells(cellsList: validKnightMoves, previousCell: data.pop())
+            let metaCells = convertCellsToMetacells(cellsList: validKnightMoves, previousCell: topInStackCell)
+            data.pop()
             
             for metaCell in metaCells {
                 data.push(metaCell)

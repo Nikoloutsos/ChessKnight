@@ -16,9 +16,9 @@ class Coordinate{
     let x: Int
     let y: Int
     
-    init(x x: Int, y y: Int) {
-        self.x = x
-        self.y = y
+    init(x xPos: Int, y yPos: Int) {
+        self.x = xPos
+        self.y = yPos
     }
     
     func isSameCoordinate(with coordinate: Coordinate) -> Bool{
@@ -75,7 +75,7 @@ class ChessBoardUIView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let coordinateStartDragging = self.coordinateStartDragging else{return}
+        guard let _ = self.coordinateStartDragging else{return}
         let firstTouch = touches.first!
         let location = firstTouch.location(in: self)
         let coordinateClicked = getSquareLocationByXandY(x: location.x, y: location.y)

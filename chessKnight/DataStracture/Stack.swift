@@ -15,8 +15,8 @@ struct Stack {
         return topElement
     }
     
-    mutating func pop() -> MetaCell {
-        return items.removeFirst()
+    mutating func pop() {
+        items.removeFirst()
     }
   
     mutating func push(_ element: MetaCell) {
