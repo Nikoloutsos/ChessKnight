@@ -20,10 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         chessBoardUIView.delegate = presenter
         
-        let config = Configuration(sizeOfChessBoard: 16)
+        let config = Configuration(sizeOfChessBoard: 8)
         chessBoardUIView.applyConfiguration(conf: config)
         presenter.initGame(conf: config)
-        
         chessSizeSlider.value = 8
     }
     

@@ -26,6 +26,9 @@
 		1CD92B022582C6FA00FAC266 /* ChessBoardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B012582C6FA00FAC266 /* ChessBoardUIView.swift */; };
 		1CD92B062582F84100FAC266 /* ChessBoardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */; };
 		1CD92B0A258303EE00FAC266 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B09258303EE00FAC266 /* ViewControllerPresenter.swift */; };
+		1CD92B1E2583E2D700FAC266 /* PathTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B1C2583E2D700FAC266 /* PathTableViewCell.swift */; };
+		1CD92B1F2583E2D700FAC266 /* PathTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD92B1D2583E2D700FAC266 /* PathTableViewCell.xib */; };
+		1CD92B242583E52800FAC266 /* UtilExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD92B232583E52800FAC266 /* UtilExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		1CD92B012582C6FA00FAC266 /* ChessBoardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardUIView.swift; sourceTree = "<group>"; };
 		1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardDelegate.swift; sourceTree = "<group>"; };
 		1CD92B09258303EE00FAC266 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		1CD92B1C2583E2D700FAC266 /* PathTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathTableViewCell.swift; sourceTree = "<group>"; };
+		1CD92B1D2583E2D700FAC266 /* PathTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathTableViewCell.xib; sourceTree = "<group>"; };
+		1CD92B232583E52800FAC266 /* UtilExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		1CD01B8225815D2C009B7748 /* chessKnight */ = {
 			isa = PBXGroup;
 			children = (
+				1CD92B222583E51300FAC266 /* Utils */,
 				1CD01BC02581A521009B7748 /* scene */,
 				1CD01BB125816D37009B7748 /* dataStracture */,
 				1CD01B9825815D50009B7748 /* model */,
@@ -169,6 +176,7 @@
 		1CD01BEB25825B62009B7748 /* resultPaths */ = {
 			isa = PBXGroup;
 			children = (
+				1CD92B0D2583DDFF00FAC266 /* tableView */,
 				1CD01BEC25825BED009B7748 /* PathsDisplayViewController.swift */,
 			);
 			path = resultPaths;
@@ -181,6 +189,23 @@
 				1CD92B052582F84100FAC266 /* ChessBoardDelegate.swift */,
 			);
 			path = customView;
+			sourceTree = "<group>";
+		};
+		1CD92B0D2583DDFF00FAC266 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92B1C2583E2D700FAC266 /* PathTableViewCell.swift */,
+				1CD92B1D2583E2D700FAC266 /* PathTableViewCell.xib */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		1CD92B222583E51300FAC266 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1CD92B232583E52800FAC266 /* UtilExtensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +290,7 @@
 			files = (
 				1CD01B9025815D2F009B7748 /* LaunchScreen.storyboard in Resources */,
 				1CD01B8D25815D2F009B7748 /* Assets.xcassets in Resources */,
+				1CD92B1F2583E2D700FAC266 /* PathTableViewCell.xib in Resources */,
 				1CD01B8B25815D2C009B7748 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +311,7 @@
 			files = (
 				1CD01BED25825BED009B7748 /* PathsDisplayViewController.swift in Sources */,
 				1CD01BAF25816C71009B7748 /* SolutionEngine.swift in Sources */,
+				1CD92B1E2583E2D700FAC266 /* PathTableViewCell.swift in Sources */,
 				1CD01BBE2581A288009B7748 /* Path.swift in Sources */,
 				1CD92B0A258303EE00FAC266 /* ViewControllerPresenter.swift in Sources */,
 				1CD01B8825815D2C009B7748 /* ViewController.swift in Sources */,
@@ -296,6 +323,7 @@
 				1CD01BB325816D4C009B7748 /* Stack.swift in Sources */,
 				1CD92B022582C6FA00FAC266 /* ChessBoardUIView.swift in Sources */,
 				1CD01B8625815D2C009B7748 /* SceneDelegate.swift in Sources */,
+				1CD92B242583E52800FAC266 /* UtilExtensions.swift in Sources */,
 				1CD01B9F25815ED6009B7748 /* Knight.swift in Sources */,
 				1CD01BAC258167CC009B7748 /* Game.swift in Sources */,
 			);

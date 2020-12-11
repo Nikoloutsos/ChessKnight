@@ -14,13 +14,13 @@ class Path{
             var fullPathNotation = ""
             
             for cell in path{
-                var move = "♘"
+                var move = "♞"
                 move += ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P"][cell.xPosition]
                 move += "\(cell.yPosition + 1)"
                 
-                fullPathNotation += " \(move)"
+                fullPathNotation += " \(move) <- "
             }
-            return fullPathNotation
+            return String(fullPathNotation.dropLast(3))
         }
     }
     

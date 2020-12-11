@@ -171,16 +171,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tck-SD-3nh">
+                                <rect key="frame" x="0.0" y="118.5" width="414" height="643.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HQg-LP-Jhb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tck-SD-3nh" firstAttribute="leading" secondItem="HQg-LP-Jhb" secondAttribute="leading" id="Ch4-MF-zky"/>
                             <constraint firstItem="zUH-D6-5bY" firstAttribute="top" secondItem="HQg-LP-Jhb" secondAttribute="top" constant="16" id="Dmn-dh-iYa"/>
+                            <constraint firstItem="HQg-LP-Jhb" firstAttribute="trailing" secondItem="tck-SD-3nh" secondAttribute="trailing" id="MiJ-xv-X7Y"/>
                             <constraint firstItem="HQg-LP-Jhb" firstAttribute="trailing" secondItem="zUH-D6-5bY" secondAttribute="trailing" id="Qs6-po-Sir"/>
+                            <constraint firstItem="HQg-LP-Jhb" firstAttribute="bottom" secondItem="tck-SD-3nh" secondAttribute="bottom" constant="100" id="Ux6-3E-nIi"/>
+                            <constraint firstItem="tck-SD-3nh" firstAttribute="top" secondItem="zUH-D6-5bY" secondAttribute="bottom" constant="40" id="sHQ-dm-mre"/>
                             <constraint firstItem="zUH-D6-5bY" firstAttribute="leading" secondItem="HQg-LP-Jhb" secondAttribute="leading" id="xwi-Ig-2KM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YvK-VW-29p"/>
+                    <connections>
+                        <outlet property="pathsUITableView" destination="tck-SD-3nh" id="Snv-qN-s0Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvn-EL-w89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
